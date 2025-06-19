@@ -36,8 +36,35 @@ function startCountdown(targetDateTime, containerId) {
     const interval = setInterval(updateCountdown, 1000);
   }
 
+
+
+function galleryEffect(){
+  const frames = document.querySelectorAll("div.frame-canvas > img")
+
+  let selector = -1
+  setInterval(function(){
+    selector++
+    if(selector == frames.length)
+    {
+      selector = 0
+    }
+
+
+    frames.forEach(frame => {
+      frame.classList.add("animate__fadeOut")
+    })
+
+    frames[selector].classList.remove("animate__fadeOut")
+    frames[selector].classList.add("animate__fadeIn")
+  },1000)
+}
+
+
+
+
   document.addEventListener("DOMContentLoaded",()=>{
     startCountdown("2025-07-11T23:59:00", "countdown");
+    galleryEffect();
   })
 
   
