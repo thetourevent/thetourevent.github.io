@@ -63,7 +63,7 @@ function galleryEffect(){
 
 
   document.addEventListener("DOMContentLoaded",()=>{
-    startCountdown("2025-07-11T23:59:00", "countdown");
+    startCountdown("2025-07-02T23:59:00", "countdown");
     galleryEffect();
   })
 
